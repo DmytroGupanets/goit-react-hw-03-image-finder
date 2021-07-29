@@ -24,7 +24,6 @@ class App extends Component {
       this.fetchPictures();
     }
 
-    console.dir(window);
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: "smooth",
