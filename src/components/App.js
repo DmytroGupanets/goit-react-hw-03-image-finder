@@ -24,12 +24,11 @@ class App extends Component {
       this.fetchPictures();
     }
 
-    if (window.innerWidth > 1376) {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: "smooth",
-      });
-    }
+    console.dir(window);
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
   }
 
   onFormSubmit = (query) => {
@@ -49,6 +48,7 @@ class App extends Component {
           currentPage: prevState.currentPage + 1,
         }))
       )
+      .catch(console.log)
       .finally(() => this.setState({ loaderVisible: false }));
   };
 

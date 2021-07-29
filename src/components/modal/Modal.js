@@ -14,13 +14,13 @@ class Modal extends Component {
 
   closeModalByEsc = (e) => {
     if (e.code === "Escape") {
-      this.props.toggleModal();
+      this.props.toggleModal("", "");
     }
   };
 
   handleBackdropClick = (e) => {
     if (e.currentTarget === e.target) {
-      this.props.toggleModal();
+      this.props.toggleModal("", "");
     }
   };
 
